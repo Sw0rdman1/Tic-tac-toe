@@ -1,0 +1,130 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  font-family: "Orbitron", sans-serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.main-screen-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container {
+  padding: 2rem 0;
+  width: 100%;
+  background: #2b2454;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-statistics-container {
+  background: #2b2454;
+  padding: 100px;
+  color: whitesmoke;
+  border-radius: 50px;
+}
+
+.red-player {
+  background: rgb(148, 0, 0);
+}
+
+.blue-player {
+  background: rgb(0, 0, 99);
+}
+
+.main-section-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.middle-part-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-section-result {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-section-result button {
+  font-family: "Orbitron", sans-serif;
+  background: whitesmoke;
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 3px 15px;
+  background: #2b2454;
+  color: whitesmoke;
+}
+
+.board-container {
+  width: 600px;
+  height: 600px;
+  border: 2px solid #2b2454;
+  background: rgb(244, 244, 244);
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.board-tile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2b2454;
+}
+
+.o-player {
+  height: 65%;
+  width: 65%;
+  border-radius: 50%;
+  outline: 5px solid #2b2454;
+}
+
+.x-player {
+  position: relative;
+  height: 80%; /* this can be anything */
+  width: 80%; /* ...but maintain 1:1 aspect ratio */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.x-player::before,
+.x-player::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 7px; /* cross thickness */
+  background-color: black;
+}
+
+.x-player::before {
+  transform: rotate(45deg);
+}
+
+.x-player::after {
+  transform: rotate(-45deg);
+}
